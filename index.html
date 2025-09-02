@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2 Kosa Kata - Ukuran dan Bahan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .slide-container { 
+            display: none; 
+            width: 100%;
+            height: 100vh;
+            padding: 1rem;
+            overflow: hidden;
+        }
+        .slide-container.active { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-animation { animation: slideIn 0.5s ease-in-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-navigation-overlay {
+            display: none;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .animate-bounce { animation: bounce 2s infinite; }
+        .objectives-box {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(168, 85, 247, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            max-width: 200px;
+            z-index: 9999;
+        }
+        .word-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .word-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Objectives Box (appears on every slide) -->
+    <div class="objectives-box">
+        <h4 class="font-bold mb-1 text-xs">📚 Unit 2:</h4>
+        <ul class="text-xs space-y-0.5">
+            <li>✓ Kata ukuran</li>
+            <li>✓ Kata bahan</li>
+            <li>✓ Guna ayat</li>
+            <li>✓ Banding saiz</li>
+        </ul>
+    </div>
+
+
+
+    <!-- Unit 2 Vocabulary Slides -->
+    <section id="unit2-vocabulary-slides" class="section-content">
+        
+        <!-- Vocabulary Slide 1: Introduction -->
+        <div class="slide-container active slide-animation">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-purple-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-purple-800 font-semibold">🎯 Objektif: Kenalan dengan topik ukuran dan bahan</p>
+                </div>
+                <div class="text-6xl mb-6 animate-bounce">📏</div>
+                <h2 class="text-5xl font-bold text-gray-800 mb-4">Unit 2: Kosa Kata</h2>
+                <p class="text-3xl text-gray-600 mb-6">Vocabulary - Ukuran dan Bahan</p>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-8 mx-auto max-w-4xl">
+                    <p class="text-4xl text-purple-800 font-bold mb-4">Mari belajar ukuran dan bahan!</p>
+                    <p class="text-2xl text-pink-700 mb-2">Besar, kecil, panjang, pendek</p>
+                    <p class="text-xl text-gray-600 mt-4">Let's learn about sizes and materials!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 2: Main Objectives -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-indigo-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-indigo-800 font-semibold">🎯 Objektif: Faham matlamat pembelajaran kosa kata</p>
+                </div>
+                <div class="text-5xl mb-6">🎯</div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Objektif Pembelajaran</h2>
+                <div class="grid grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-purple-50 rounded-3xl p-6">
+                        <h3 class="text-2xl font-bold text-purple-800 mb-4">Selepas belajar ini, anda boleh:</h3>
+                        <ul class="text-left text-lg text-purple-700 space-y-3">
+                            <li>✓ Sebut kata ukuran mudah</li>
+                            <li>✓ Kenal jenis-jenis bahan</li>
+                            <li>✓ Banding saiz benda</li>
+                            <li>✓ Guna dalam ayat harian</li>
+                            <li>✓ Terang benda dengan betul</li>
+                        </ul>
+                    </div>
+                    <div class="bg-pink-50 rounded-3xl p-6">
+                        <h3 class="text-2xl font-bold text-pink-800 mb-4">Learning Goals:</h3>
+                        <ul class="text-left text-lg text-pink-700 space-y-3">
+                            <li>✓ Say basic size words</li>
+                            <li>✓ Know different materials</li>
+                            <li>✓ Compare object sizes</li>
+                            <li>✓ Use in daily sentences</li>
+                            <li>✓ Describe things correctly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 3: Size Words - Big vs Small -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-green-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-green-800 font-semibold">🎯 Objektif: Bezakan benda besar dan kecil</p>
+                </div>
+                <div class="text-5xl mb-6">📐</div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">Kata Ukuran: Besar & Kecil</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-red-50 rounded-3xl p-6 word-card">
+                        <div class="text-5xl mb-4">🐘</div>
+                        <h3 class="text-3xl font-bold text-red-800 mb-4">BESAR</h3>
+                        <p class="text-xl text-red-600 mb-3">big / large</p>
+                        <div class="space-y-2 text-lg text-red-700">
+                            <p>🏠 Rumah besar</p>
+                            <p>🚗 Kereta besar</p>
+                            <p>📚 Buku besar</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-6 word-card">
+                        <div class="text-5xl mb-4">🐭</div>
+                        <h3 class="text-3xl font-bold text-blue-800 mb-4">KECIL</h3>
+                        <p class="text-xl text-blue-600 mb-3">small / little</p>
+                        <div class="space-y-2 text-lg text-blue-700">
+                            <p>🏘️ Rumah kecil</p>
+                            <p>🚙 Kereta kecil</p>
+                            <p>📖 Buku kecil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 4: Size Words - Long vs Short -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-yellow-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-yellow-800 font-semibold">🎯 Objektif: Bezakan benda panjang dan pendek</p>
+                </div>
+                <div class="text-8xl mb-12">📏</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Kata Ukuran: Panjang & Pendek</h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+                    <div class="bg-green-50 rounded-3xl p-12 word-card">
+                        <div class="text-8xl mb-8">🐍</div>
+                        <h3 class="text-6xl font-bold text-green-800 mb-6">PANJANG</h3>
+                        <p class="text-3xl text-green-600 mb-4">long</p>
+                        <div class="space-y-4 text-2xl text-green-700">
+                            <p>✏️ Pensel panjang</p>
+                            <p>👗 Baju panjang</p>
+                            <p>🛣️ Jalan panjang</p>
+                        </div>
+                    </div>
+                    <div class="bg-orange-50 rounded-3xl p-12 word-card">
+                        <div class="text-8xl mb-8">🐢</div>
+                        <h3 class="text-6xl font-bold text-orange-800 mb-6">PENDEK</h3>
+                        <p class="text-3xl text-orange-600 mb-4">short</p>
+                        <div class="space-y-4 text-2xl text-orange-700">
+                            <p>✏️ Pensel pendek</p>
+                            <p>👕 Baju pendek</p>
+                            <p>🛤️ Jalan pendek</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 5: Size Words - Thick vs Thin -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-pink-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-pink-800 font-semibold">🎯 Objektif: Bezakan benda tebal dan nipis</p>
+                </div>
+                <div class="text-8xl mb-12">📚</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Kata Ukuran: Tebal & Nipis</h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+                    <div class="bg-purple-50 rounded-3xl p-12 word-card">
+                        <div class="text-8xl mb-8">📚</div>
+                        <h3 class="text-6xl font-bold text-purple-800 mb-6">TEBAL</h3>
+                        <p class="text-3xl text-purple-600 mb-4">thick</p>
+                        <div class="space-y-4 text-2xl text-purple-700">
+                            <p>📖 Buku tebal</p>
+                            <p>🧥 Jaket tebal</p>
+                            <p>🍞 Roti tebal</p>
+                        </div>
+                    </div>
+                    <div class="bg-cyan-50 rounded-3xl p-12 word-card">
+                        <div class="text-8xl mb-8">📄</div>
+                        <h3 class="text-6xl font-bold text-cyan-800 mb-6">NIPIS</h3>
+                        <p class="text-3xl text-cyan-600 mb-4">thin</p>
+                        <div class="space-y-4 text-2xl text-cyan-700">
+                            <p>📃 Kertas nipis</p>
+                            <p>👕 Baju nipis</p>
+                            <p>🥞 Roti nipis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 6: Materials - Natural -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-green-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-green-800 font-semibold">🎯 Objektif: Kenal bahan dari alam semula jadi</p>
+                </div>
+                <div class="text-8xl mb-12">🌿</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Bahan Semula Jadi</h2>
+                <div class="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <div class="bg-amber-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🪵</div>
+                        <h4 class="text-3xl font-bold text-amber-800 mb-4">KAYU</h4>
+                        <p class="text-xl text-amber-600 mb-2">wood</p>
+                        <p class="text-lg text-gray-600">Meja kayu</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🪨</div>
+                        <h4 class="text-3xl font-bold text-gray-800 mb-4">BATU</h4>
+                        <p class="text-xl text-gray-600 mb-2">stone</p>
+                        <p class="text-lg text-gray-600">Dinding batu</p>
+                    </div>
+                    <div class="bg-green-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🌱</div>
+                        <h4 class="text-3xl font-bold text-green-800 mb-4">DAUN</h4>
+                        <p class="text-xl text-green-600 mb-2">leaf</p>
+                        <p class="text-lg text-gray-600">Daun pisang</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">💧</div>
+                        <h4 class="text-3xl font-bold text-blue-800 mb-4">AIR</h4>
+                        <p class="text-xl text-blue-600 mb-2">water</p>
+                        <p class="text-lg text-gray-600">Air bersih</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 7: Materials - Man-made -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="text-8xl mb-12">🏭</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Bahan Buatan Manusia</h2>
+                <div class="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <div class="bg-red-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🧱</div>
+                        <h4 class="text-3xl font-bold text-red-800 mb-4">BATA</h4>
+                        <p class="text-xl text-red-600 mb-2">brick</p>
+                        <p class="text-lg text-gray-600">Rumah bata</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🛍️</div>
+                        <h4 class="text-3xl font-bold text-blue-800 mb-4">PLASTIK</h4>
+                        <p class="text-xl text-blue-600 mb-2">plastic</p>
+                        <p class="text-lg text-gray-600">Beg plastik</p>
+                    </div>
+                    <div class="bg-yellow-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🥤</div>
+                        <h4 class="text-3xl font-bold text-yellow-800 mb-4">KACA</h4>
+                        <p class="text-xl text-yellow-600 mb-2">glass</p>
+                        <p class="text-lg text-gray-600">Cawan kaca</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🔧</div>
+                        <h4 class="text-3xl font-bold text-gray-800 mb-4">BESI</h4>
+                        <p class="text-xl text-gray-600 mb-2">iron</p>
+                        <p class="text-lg text-gray-600">Pagar besi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 7: Materials - Man-made -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-blue-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-blue-800 font-semibold">🎯 Objektif: Kenal bahan yang dibuat manusia</p>
+                </div>
+                <div class="text-8xl mb-12">🏭</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Bahan Buatan Manusia</h2>
+                <div class="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <div class="bg-red-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🧱</div>
+                        <h4 class="text-3xl font-bold text-red-800 mb-4">BATA</h4>
+                        <p class="text-xl text-red-600 mb-2">brick</p>
+                        <p class="text-lg text-gray-600">Rumah bata</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🛍️</div>
+                        <h4 class="text-3xl font-bold text-blue-800 mb-4">PLASTIK</h4>
+                        <p class="text-xl text-blue-600 mb-2">plastic</p>
+                        <p class="text-lg text-gray-600">Beg plastik</p>
+                    </div>
+                    <div class="bg-yellow-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🥤</div>
+                        <h4 class="text-3xl font-bold text-yellow-800 mb-4">KACA</h4>
+                        <p class="text-xl text-yellow-600 mb-2">glass</p>
+                        <p class="text-lg text-gray-600">Cawan kaca</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-3xl p-8 text-center word-card">
+                        <div class="text-6xl mb-4">🔧</div>
+                        <h4 class="text-3xl font-bold text-gray-800 mb-4">BESI</h4>
+                        <p class="text-xl text-gray-600 mb-2">iron</p>
+                        <p class="text-lg text-gray-600">Pagar besi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 8: Comparing Sizes -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-purple-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-purple-800 font-semibold">🎯 Objektif: Banding saiz dua benda berbeza</p>
+                </div>
+                <div class="text-8xl mb-12">⚖️</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Bandingkan Saiz</h2>
+                <div class="space-y-12 max-w-7xl mx-auto">
+                    <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-3xl p-12">
+                        <h3 class="text-5xl font-bold text-red-800 mb-8">Gajah vs Tikus</h3>
+                        <div class="flex justify-center items-center space-x-16">
+                            <div class="text-center">
+                                <div class="text-9xl mb-4">🐘</div>
+                                <p class="text-4xl font-bold text-red-700">Gajah <span class="text-green-600">BESAR</span></p>
+                            </div>
+                            <div class="text-6xl text-gray-400">vs</div>
+                            <div class="text-center">
+                                <div class="text-5xl mb-4">🐭</div>
+                                <p class="text-4xl font-bold text-blue-700">Tikus <span class="text-orange-600">KECIL</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-12">
+                        <h3 class="text-5xl font-bold text-green-800 mb-8">Pensel vs Pen</h3>
+                        <div class="flex justify-center items-center space-x-16">
+                            <div class="text-center">
+                                <div class="text-8xl mb-4">✏️</div>
+                                <p class="text-4xl font-bold text-green-700">Pensel <span class="text-purple-600">PANJANG</span></p>
+                            </div>
+                            <div class="text-6xl text-gray-400">vs</div>
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🖊️</div>
+                                <p class="text-4xl font-bold text-blue-700">Pen <span class="text-orange-600">PENDEK</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 9: Using Size Words in Sentences -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-green-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-green-800 font-semibold">🎯 Objektif: Guna kata ukuran dalam ayat sendiri</p>
+                </div>
+                <div class="text-8xl mb-12">💬</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Guna Dalam Ayat</h2>
+                <div class="space-y-8 max-w-7xl mx-auto">
+                    <div class="bg-yellow-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-yellow-800 mb-6">Contoh Ayat:</h3>
+                        <div class="space-y-6 text-3xl text-left">
+                            <p>🏠 "Rumah saya <strong class="text-red-600">besar</strong> dan selesa."</p>
+                            <p>📱 "Telefon ini <strong class="text-blue-600">kecil</strong> dan mudah dibawa."</p>
+                            <p>✏️ "Pensel ini <strong class="text-green-600">panjang</strong> dan tajam."</p>
+                            <p>📖 "Buku ini <strong class="text-purple-600">tebal</strong> dan berat."</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-blue-800 mb-6">Cuba Buat Ayat:</h3>
+                        <div class="space-y-6 text-3xl text-left">
+                            <p>🚗 "Kereta itu _______ dan cantik." (besar/kecil)</p>
+                            <p>👗 "Baju ini _______ dan kemas." (panjang/pendek)</p>
+                            <p>📚 "Buku itu _______ dan menarik." (tebal/nipis)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 10: Material Sentences -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-orange-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-orange-800 font-semibold">🎯 Objektif: Terang bahan yang digunakan untuk buat benda</p>
+                </div>
+                <div class="text-8xl mb-12">🗣️</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Ayat Tentang Bahan</h2>
+                <div class="space-y-8 max-w-7xl mx-auto">
+                    <div class="bg-amber-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-amber-800 mb-6">Bahan Semula Jadi:</h3>
+                        <div class="space-y-6 text-3xl text-left">
+                            <p>🪵 "Meja ini diperbuat daripada <strong class="text-amber-600">kayu</strong>."</p>
+                            <p>🪨 "Dinding rumah dibina dengan <strong class="text-gray-600">batu</strong>."</p>
+                            <p>💧 "Saya minum <strong class="text-blue-600">air</strong> sejuk."</p>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-blue-800 mb-6">Bahan Buatan:</h3>
+                        <div class="space-y-6 text-3xl text-left">
+                            <p>🧱 "Rumah ini dibuat daripada <strong class="text-red-600">bata</strong>."</p>
+                            <p>🛍️ "Beg ini diperbuat daripada <strong class="text-blue-600">plastik</strong>."</p>
+                            <p>🥤 "Cawan ini diperbuat daripada <strong class="text-yellow-600">kaca</strong>."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 11: Practice Quiz Part 1 -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-purple-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-purple-800 font-semibold">🎯 Objektif: Pilih kata ukuran yang betul</p>
+                </div>
+                <div class="text-8xl mb-12">🧠</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Latihan (1)</h2>
+                <div class="max-w-7xl mx-auto">
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-16 mb-12">
+                        <h3 class="text-5xl font-semibold mb-12">Gajah itu _______ ?</h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <button onclick="showQuizAnswer('correct', 'vocab1')" class="p-8 bg-white border-4 border-gray-300 rounded-2xl hover:bg-green-50 hover:border-green-300 transition-all text-4xl font-medium transform hover:scale-105">BESAR</button>
+                            <button onclick="showQuizAnswer('wrong', 'vocab1')" class="p-8 bg-white border-4 border-gray-300 rounded-2xl hover:bg-red-50 hover:border-red-300 transition-all text-4xl font-medium transform hover:scale-105">KECIL</button>
+                        </div>
+                    </div>
+                    <div id="vocab1-quiz-result" class="hidden bg-green-50 rounded-3xl p-8">
+                        <p class="text-green-800 font-semibold text-4xl">Betul! Gajah itu BESAR! 🐘</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 12: Practice Quiz Part 2 -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-green-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-green-800 font-semibold">🎯 Objektif: Pilih bahan yang sesuai untuk benda</p>
+                </div>
+                <div class="text-8xl mb-12">🧠</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Latihan (2)</h2>
+                <div class="max-w-7xl mx-auto">
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-16 mb-12">
+                        <h3 class="text-5xl font-semibold mb-12">Meja diperbuat daripada _______ ?</h3>
+                        <div class="grid grid-cols-2 gap-8">
+                            <button onclick="showQuizAnswer('correct', 'vocab2')" class="p-8 bg-white border-4 border-gray-300 rounded-2xl hover:bg-green-50 hover:border-green-300 transition-all text-4xl font-medium transform hover:scale-105">KAYU</button>
+                            <button onclick="showQuizAnswer('wrong', 'vocab2')" class="p-8 bg-white border-4 border-gray-300 rounded-2xl hover:bg-red-50 hover:border-red-300 transition-all text-4xl font-medium transform hover:scale-105">AIR</button>
+                        </div>
+                    </div>
+                    <div id="vocab2-quiz-result" class="hidden bg-green-50 rounded-3xl p-8">
+                        <p class="text-green-800 font-semibold text-4xl">Betul! Meja diperbuat daripada KAYU! 🪵</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 13: Everyday Objects -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-cyan-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-cyan-800 font-semibold">🎯 Objektif: Terang benda rumah dengan ukuran dan bahan</p>
+                </div>
+                <div class="text-8xl mb-12">🏠</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Benda Harian</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <div class="bg-yellow-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🪑</div>
+                        <h4 class="text-3xl font-bold text-yellow-800 mb-4">KERUSI</h4>
+                        <p class="text-xl text-yellow-600 mb-2">chair</p>
+                        <p class="text-lg text-gray-600">Kerusi kayu besar</p>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🥄</div>
+                        <h4 class="text-3xl font-bold text-blue-800 mb-4">SUDU</h4>
+                        <p class="text-xl text-blue-600 mb-2">spoon</p>
+                        <p class="text-lg text-gray-600">Sudu plastik kecil</p>
+                    </div>
+                    <div class="bg-green-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🪟</div>
+                        <h4 class="text-3xl font-bold text-green-800 mb-4">TINGKAP</h4>
+                        <p class="text-xl text-green-600 mb-2">window</p>
+                        <p class="text-lg text-gray-600">Tingkap kaca besar</p>
+                    </div>
+                    <div class="bg-red-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🚪</div>
+                        <h4 class="text-3xl font-bold text-red-800 mb-4">PINTU</h4>
+                        <p class="text-xl text-red-600 mb-2">door</p>
+                        <p class="text-lg text-gray-600">Pintu kayu tebal</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🛏️</div>
+                        <h4 class="text-3xl font-bold text-purple-800 mb-4">KATIL</h4>
+                        <p class="text-xl text-purple-600 mb-2">bed</p>
+                        <p class="text-lg text-gray-600">Katil besi besar</p>
+                    </div>
+                    <div class="bg-orange-50 rounded-3xl p-8 word-card">
+                        <div class="text-6xl mb-4">🍽️</div>
+                        <h4 class="text-3xl font-bold text-orange-800 mb-4">PINGGAN</h4>
+                        <p class="text-xl text-orange-600 mb-2">plate</p>
+                        <p class="text-lg text-gray-600">Pinggan kaca nipis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 14: Describing Game -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-yellow-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-yellow-800 font-semibold">🎯 Objektif: Gabung kata ukuran dan bahan untuk terang benda</p>
+                </div>
+                <div class="text-8xl mb-12">🎮</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Permainan Terang Benda</h2>
+                <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-pink-800">Terangkan benda ini:</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <div class="text-8xl mb-6">📱</div>
+                            <h4 class="text-4xl font-bold text-gray-800 mb-6">TELEFON</h4>
+                            <div class="space-y-4 text-2xl text-left">
+                                <p>Saiz: <span class="text-blue-600 font-bold">_______</span> (besar/kecil)</p>
+                                <p>Bentuk: <span class="text-green-600 font-bold">_______</span> (panjang/pendek)</p>
+                                <p>Bahan: <span class="text-purple-600 font-bold">_______</span> (plastik/kayu)</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <div class="text-8xl mb-6">📚</div>
+                            <h4 class="text-4xl font-bold text-gray-800 mb-6">BUKU</h4>
+                            <div class="space-y-4 text-2xl text-left">
+                                <p>Saiz: <span class="text-red-600 font-bold">_______</span> (besar/kecil)</p>
+                                <p>Ketebalan: <span class="text-orange-600 font-bold">_______</span> (tebal/nipis)</p>
+                                <p>Bahan: <span class="text-green-600 font-bold">_______</span> (kertas/besi)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-pink-100 rounded-xl">
+                        <p class="text-pink-800 font-medium text-2xl">💡 Tip: Guna mata untuk tengok, tangan untuk rasa!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 15: My Room Description -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-blue-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-blue-800 font-semibold">🎯 Objektif: Tulis perenggan guna kata ukuran dan bahan</p>
+                </div>
+                <div class="text-8xl mb-12">🛏️</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Terang Bilik Saya</h2>
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-blue-800">Contoh Perenggan:</h3>
+                    <div class="bg-white rounded-3xl p-12 text-left">
+                        <div class="space-y-6 text-3xl text-gray-700">
+                            <p>"Bilik saya ada katil <strong class="text-purple-600">besar</strong> yang diperbuat daripada <strong class="text-amber-600">kayu</strong>."</p>
+                            <p>"Meja saya <strong class="text-green-600">kecil</strong> tetapi selesa untuk belajar."</p>
+                            <p>"Tingkap bilik saya <strong class="text-blue-600">panjang</strong> dan diperbuat daripada <strong class="text-yellow-600">kaca</strong>."</p>
+                            <p>"Saya ada almari <strong class="text-red-600">tebal</strong> untuk simpan baju."</p>
+                        </div>
+                        <div class="mt-8 p-6 bg-blue-50 rounded-xl">
+                            <p class="text-blue-800 font-medium text-2xl">✏️ Cuba tulis tentang bilik anda!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 16: Review All Words -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-indigo-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-indigo-800 font-semibold">🎯 Objektif: Ingat semua kata ukuran dan bahan yang dipelajari</p>
+                </div>
+                <div class="text-8xl mb-12">📋</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Ulangkaji Semua</h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-red-800 mb-8">Kata Ukuran:</h3>
+                        <div class="grid grid-cols-2 gap-4 text-2xl">
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-red-600">BESAR</p>
+                                <p class="text-sm text-gray-600">big</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-blue-600">KECIL</p>
+                                <p class="text-sm text-gray-600">small</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-green-600">PANJANG</p>
+                                <p class="text-sm text-gray-600">long</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-orange-600">PENDEK</p>
+                                <p class="text-sm text-gray-600">short</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-purple-600">TEBAL</p>
+                                <p class="text-sm text-gray-600">thick</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-cyan-600">NIPIS</p>
+                                <p class="text-sm text-gray-600">thin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-10">
+                        <h3 class="text-4xl font-bold text-green-800 mb-8">Kata Bahan:</h3>
+                        <div class="grid grid-cols-2 gap-4 text-2xl">
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-amber-600">KAYU</p>
+                                <p class="text-sm text-gray-600">wood</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-gray-600">BATU</p>
+                                <p class="text-sm text-gray-600">stone</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-red-600">BATA</p>
+                                <p class="text-sm text-gray-600">brick</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-blue-600">PLASTIK</p>
+                                <p class="text-sm text-gray-600">plastic</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-yellow-600">KACA</p>
+                                <p class="text-sm text-gray-600">glass</p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4">
+                                <p class="font-bold text-gray-700">BESI</p>
+                                <p class="text-sm text-gray-600">iron</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 17: Group Activity 1 - Size Sorting Game -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-orange-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-orange-800 font-semibold">🎯 Objektif: Kerjasama susun benda mengikut saiz</p>
+                </div>
+                <div class="text-8xl mb-12">👥</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Aktiviti Kumpulan 1: Susun Saiz</h2>
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-orange-800">🎮 Permainan Susun Mengikut Saiz</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">📋 Cara Main:</h4>
+                            <div class="space-y-6 text-2xl text-left text-gray-700">
+                                <p>1️⃣ Buat kumpulan 4-5 orang</p>
+                                <p>2️⃣ Cari 10 benda dalam kelas</p>
+                                <p>3️⃣ Susun dari <strong class="text-red-600">BESAR</strong> ke <strong class="text-blue-600">KECIL</strong></p>
+                                <p>4️⃣ Terangkan pilihan kumpulan</p>
+                                <p>5️⃣ Kumpulan lain teka urutan</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🏆 Contoh Benda:</h4>
+                            <div class="space-y-4 text-2xl text-left">
+                                <div class="flex items-center space-x-4">
+                                    <span class="text-4xl">📚</span>
+                                    <span>Buku (besar → kecil)</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="text-4xl">✏️</span>
+                                    <span>Pensel (panjang → pendek)</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="text-4xl">📱</span>
+                                    <span>Telefon, tablet, laptop</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <span class="text-4xl">🎒</span>
+                                    <span>Beg sekolah, kotak pensel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-orange-100 rounded-xl">
+                        <p class="text-orange-800 font-medium text-2xl">⏰ Masa: 15 minit | 🎯 Matlamat: Guna kata ukuran dengan betul</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 18: Group Activity 2 - Material Detective -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-purple-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-purple-800 font-semibold">🎯 Objektif: Cari dan kenal pasti bahan benda</p>
+                </div>
+                <div class="text-8xl mb-12">🕵️</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Aktiviti Kumpulan 2: Detektif Bahan</h2>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-purple-800">🔍 Misi: Cari Bahan Tersembunyi</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🎯 Tugasan Kumpulan:</h4>
+                            <div class="space-y-6 text-2xl text-left text-gray-700">
+                                <p>1️⃣ Setiap kumpulan dapat 1 bahan</p>
+                                <p>2️⃣ Cari 5 benda dari bahan itu</p>
+                                <p>3️⃣ Tulis senarai dalam 10 minit</p>
+                                <p>4️⃣ Bentangkan kepada kelas</p>
+                                <p>5️⃣ Kelas teka bahan apa</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🧩 Bahan untuk Dicari:</h4>
+                            <div class="grid grid-cols-2 gap-4 text-xl">
+                                <div class="bg-amber-50 rounded-xl p-4 text-center">
+                                    <div class="text-3xl mb-2">🪵</div>
+                                    <p class="font-bold text-amber-800">KAYU</p>
+                                </div>
+                                <div class="bg-blue-50 rounded-xl p-4 text-center">
+                                    <div class="text-3xl mb-2">🛍️</div>
+                                    <p class="font-bold text-blue-800">PLASTIK</p>
+                                </div>
+                                <div class="bg-yellow-50 rounded-xl p-4 text-center">
+                                    <div class="text-3xl mb-2">🥤</div>
+                                    <p class="font-bold text-yellow-800">KACA</p>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 text-center">
+                                    <div class="text-3xl mb-2">🔧</div>
+                                    <p class="font-bold text-gray-800">BESI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-purple-100 rounded-xl">
+                        <p class="text-purple-800 font-medium text-2xl">⏰ Masa: 20 minit | 🏆 Hadiah: Kumpulan terbaik dapat sticker!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 19: Group Activity 3 - Description Circle -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-green-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-green-800 font-semibold">🎯 Objektif: Berlatih terang benda dalam kumpulan</p>
+                </div>
+                <div class="text-8xl mb-12">🔄</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Aktiviti Kumpulan 3: Bulatan Penerangan</h2>
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-green-800">🎪 Permainan Terang dan Teka</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🎭 Cara Bermain:</h4>
+                            <div class="space-y-6 text-2xl text-left text-gray-700">
+                                <p>1️⃣ Duduk dalam bulatan (6-8 orang)</p>
+                                <p>2️⃣ Satu orang pilih benda rahsia</p>
+                                <p>3️⃣ Terang tanpa sebut nama benda</p>
+                                <p>4️⃣ Guna kata ukuran dan bahan</p>
+                                <p>5️⃣ Yang lain cuba teka</p>
+                                <p>6️⃣ Bergilir-gilir semua main</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">💡 Contoh Penerangan:</h4>
+                            <div class="space-y-6 text-2xl text-left">
+                                <div class="bg-yellow-50 rounded-xl p-4">
+                                    <p class="text-gray-700">"Benda ini <strong class="text-red-600">kecil</strong> dan <strong class="text-green-600">panjang</strong>. Diperbuat daripada <strong class="text-amber-600">kayu</strong>. Kita guna untuk tulis."</p>
+                                    <p class="text-sm text-gray-500 mt-2">Jawapan: Pensel ✏️</p>
+                                </div>
+                                <div class="bg-blue-50 rounded-xl p-4">
+                                    <p class="text-gray-700">"Benda ini <strong class="text-purple-600">tebal</strong> dan <strong class="text-red-600">besar</strong>. Ada banyak muka surat. Diperbuat daripada kertas."</p>
+                                    <p class="text-sm text-gray-500 mt-2">Jawapan: Buku 📚</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-green-100 rounded-xl">
+                        <p class="text-green-800 font-medium text-2xl">⏰ Masa: 25 minit | 🎯 Setiap orang dapat giliran terang dan teka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 20: Group Activity 4 - Classroom Survey -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-cyan-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-cyan-800 font-semibold">🎯 Objektif: Kaji benda dalam kelas dan buat laporan</p>
+                </div>
+                <div class="text-8xl mb-12">📊</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Aktiviti Kumpulan 4: Kajian Kelas</h2>
+                <div class="bg-gradient-to-r from-cyan-50 to-teal-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-cyan-800">📋 Projek: Laporan Benda Kelas</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">📝 Tugasan Kumpulan:</h4>
+                            <div class="space-y-6 text-2xl text-left text-gray-700">
+                                <p>1️⃣ Buat kumpulan 3-4 orang</p>
+                                <p>2️⃣ Pilih 1 sudut kelas untuk kaji</p>
+                                <p>3️⃣ Senarai semua benda di situ</p>
+                                <p>4️⃣ Tulis ukuran dan bahan setiap benda</p>
+                                <p>5️⃣ Buat carta atau poster</p>
+                                <p>6️⃣ Bentangkan hasil kajian</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🗂️ Template Laporan:</h4>
+                            <div class="bg-gray-50 rounded-xl p-6 text-left">
+                                <div class="space-y-4 text-xl">
+                                    <p><strong>Sudut:</strong> ________________</p>
+                                    <p><strong>Benda 1:</strong> ________________</p>
+                                    <p><strong>Saiz:</strong> ________________</p>
+                                    <p><strong>Bahan:</strong> ________________</p>
+                                    <hr class="border-gray-300">
+                                    <p><strong>Benda 2:</strong> ________________</p>
+                                    <p><strong>Saiz:</strong> ________________</p>
+                                    <p><strong>Bahan:</strong> ________________</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-lg text-gray-600">
+                                <p>💡 Senaraikan 5-8 benda untuk setiap sudut</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-cyan-100 rounded-xl">
+                        <p class="text-cyan-800 font-medium text-2xl">⏰ Masa: 30 minit | 📊 Hasil: Poster untuk papan kelas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 21: Group Activity 5 - Memory Chain Game -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="mb-8 bg-pink-100 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <p class="text-3xl text-pink-800 font-semibold">🎯 Objektif: Ingat dan ulang kata ukuran dan bahan</p>
+                </div>
+                <div class="text-8xl mb-12">🧠</div>
+                <h2 class="text-7xl font-bold text-gray-800 mb-12">Aktiviti Kumpulan 5: Rantai Ingatan</h2>
+                <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl p-12 max-w-7xl mx-auto">
+                    <h3 class="text-5xl font-bold mb-12 text-pink-800">🔗 Permainan Sambung Ayat</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🎯 Peraturan Main:</h4>
+                            <div class="space-y-6 text-2xl text-left text-gray-700">
+                                <p>1️⃣ Berdiri dalam bulatan</p>
+                                <p>2️⃣ Orang pertama mulakan ayat</p>
+                                <p>3️⃣ Orang kedua ulang + tambah</p>
+                                <p>4️⃣ Teruskan sehingga semua main</p>
+                                <p>5️⃣ Kalau lupa, mula semula</p>
+                                <p>6️⃣ Cuba capai 10 benda!</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-10">
+                            <h4 class="text-4xl font-bold text-gray-800 mb-8">🗣️ Contoh Permainan:</h4>
+                            <div class="space-y-4 text-xl text-left">
+                                <div class="bg-blue-50 rounded-xl p-4">
+                                    <p><strong>Ali:</strong> "Saya nampak meja <strong class="text-amber-600">kayu</strong> <strong class="text-red-600">besar</strong>."</p>
+                                </div>
+                                <div class="bg-green-50 rounded-xl p-4">
+                                    <p><strong>Siti:</strong> "Saya nampak meja kayu besar dan kerusi <strong class="text-blue-600">plastik</strong> <strong class="text-orange-600">kecil</strong>."</p>
+                                </div>
+                                <div class="bg-yellow-50 rounded-xl p-4">
+                                    <p><strong>Ahmad:</strong> "Saya nampak meja kayu besar, kerusi plastik kecil dan pensel <strong class="text-green-600">panjang</strong>."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-pink-100 rounded-xl">
+                        <p class="text-pink-800 font-medium text-2xl">⏰ Masa: 20 minit | 🏆 Cabaran: Boleh ingat 15 benda?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Slide 22: Completion -->
+        <div class="slide-container">
+            <div class="text-center w-full">
+                <div class="text-9xl mb-12 animate-bounce">🎉</div>
+                <h2 class="text-8xl font-bold text-gray-800 mb-12">Tahniah!</h2>
+                <p class="text-5xl text-gray-600 mb-16">Anda dah selesai Unit 2: Kosa Kata - Ukuran dan Bahan</p>
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-16 max-w-7xl mx-auto mb-16">
+                    <h3 class="text-6xl font-semibold mb-12">Anda dah boleh:</h3>
+                    <div class="text-left space-y-8">
+                        <div class="flex items-center transform hover:scale-105 transition-transform">
+                            <span class="text-purple-600 mr-8 text-5xl">✓</span>
+                            <span class="text-4xl">Sebut kata ukuran dengan betul</span>
+                        </div>
+                        <div class="flex items-center transform hover:scale-105 transition-transform">
+                            <span class="text-pink-600 mr-8 text-5xl">✓</span>
+                            <span class="text-4xl">Kenal jenis-jenis bahan</span>
+                        </div>
+                        <div class="flex items-center transform hover:scale-105 transition-transform">
+                            <span class="text-purple-600 mr-8 text-5xl">✓</span>
+                            <span class="text-4xl">Banding saiz benda berbeza</span>
+                        </div>
+                        <div class="flex items-center transform hover:scale-105 transition-transform">
+                            <span class="text-pink-600 mr-8 text-5xl">✓</span>
+                            <span class="text-4xl">Terang benda dengan lengkap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-x-8">
+                    <button onclick="nextUnit()" class="px-16 py-8 bg-purple-600 text-white rounded-3xl hover:bg-purple-700 transition-colors text-3xl font-medium transform hover:scale-105">Seterusnya: Tatabahasa →</button>
+                    <button onclick="backToMenu()" class="px-16 py-8 bg-gray-600 text-white rounded-3xl hover:bg-gray-700 transition-colors text-3xl font-medium transform hover:scale-105">Balik Menu</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            slides[currentSlide].classList.add('slide-animation');
+            
+            // Navigation updated via keyboard only
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function closeSlidesView() {
+            alert('Kembali ke menu utama');
+        }
+
+        function nextUnit() {
+            alert('Pergi ke Unit 2: Tatabahasa');
+        }
+
+        function backToMenu() {
+            alert('Kembali ke menu utama');
+        }
+
+        function showQuizAnswer(result, quizId) {
+            const resultDiv = document.getElementById(quizId + '-quiz-result');
+            if (result === 'correct') {
+                resultDiv.classList.remove('hidden');
+                resultDiv.classList.add('bg-green-50');
+                resultDiv.classList.remove('bg-red-50');
+            } else {
+                resultDiv.classList.remove('hidden');
+                resultDiv.classList.add('bg-red-50');
+                resultDiv.classList.remove('bg-green-50');
+                if (quizId === 'vocab1') {
+                    resultDiv.innerHTML = '<p class="text-red-800 font-semibold text-4xl">Cuba lagi! Gajah adalah haiwan yang besar! 🐘</p>';
+                } else if (quizId === 'vocab2') {
+                    resultDiv.innerHTML = '<p class="text-red-800 font-semibold text-4xl">Cuba lagi! Meja biasanya diperbuat daripada kayu! 🪵</p>';
+                }
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'Escape') {
+                closeSlidesView();
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullscreen();
+            }
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978cc2c1d67137b2',t:'MTc1NjgxMzUyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
